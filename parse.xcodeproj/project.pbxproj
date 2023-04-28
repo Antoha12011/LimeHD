@@ -15,6 +15,7 @@
 		127964B029FC17A900409F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964AE29FC17A900409F1E /* LaunchScreen.storyboard */; };
 		129AB33E29FC4C5900B6A53B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33D29FC4C5900B6A53B /* Model.swift */; };
 		129AB34029FC4C8700B6A53B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33F29FC4C8700B6A53B /* Networking.swift */; };
+		129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB34329FC504E00B6A53B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		127964B129FC17A900409F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129AB33D29FC4C5900B6A53B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				127964A729FC17A700409F1E /* ViewController.swift */,
 				129AB33F29FC4C8700B6A53B /* Networking.swift */,
 				129AB33D29FC4C5900B6A53B /* Model.swift */,
+				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
 				127964A929FC17A700409F1E /* Main.storyboard */,
 				127964AC29FC17A900409F1E /* Assets.xcassets */,
 				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
@@ -155,6 +158,7 @@
 				127964A829FC17A700409F1E /* ViewController.swift in Sources */,
 				129AB34029FC4C8700B6A53B /* Networking.swift in Sources */,
 				127964A429FC17A700409F1E /* AppDelegate.swift in Sources */,
+				129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */,
 				127964A629FC17A700409F1E /* SceneDelegate.swift in Sources */,
 				129AB33E29FC4C5900B6A53B /* Model.swift in Sources */,
 			);
