@@ -24,12 +24,9 @@ func getJson() {
             let decoder = JSONDecoder()
             
             do {
-                
                 let newsFeed = try decoder.decode(NewsFeed.self, from: data!)
-    
                 print(newsFeed)
-            }
-            catch {
+            } catch {
                 print("Error")
             }
         }
