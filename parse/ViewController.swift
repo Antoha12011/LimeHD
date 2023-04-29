@@ -13,10 +13,7 @@ class ViewController: UIViewController {
     
     var newsData = [Channels]()
     var filteredData = [Channels]()
-    // var serchingData = [String]()
-    
-    
-    
+   
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
@@ -31,10 +28,9 @@ class ViewController: UIViewController {
         }
     }
 
-   
 }
 
-// MARK: - НАСТРОЙКА ТАБЛИЦЫ
+// MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -58,9 +54,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
-            
         }
-        
         return cell
     }
     
@@ -80,7 +74,6 @@ extension ViewController: UISearchBarDelegate {
         if searchText == "" {
             filteredData = newsData
         } else {
-            
             for item in newsData {
                 if item.name_ru.lowercased().contains(searchText.lowercased()) {
                     filteredData.append(item)
@@ -88,8 +81,6 @@ extension ViewController: UISearchBarDelegate {
             }
         }
         self.tableView.reloadData()
-        
-        
     }
     
 }
