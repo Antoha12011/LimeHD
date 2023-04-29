@@ -27,8 +27,11 @@ class ViewController: UIViewController {
 }
 
 
-// MARK: - UITableViewDelegate / UITableViewDataSource
 
+
+
+
+// MARK: - НАСТРОЙКА ТАБЛИЦЫ 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     

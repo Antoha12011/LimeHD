@@ -63,9 +63,9 @@
 		127964A229FC17A700409F1E /* parse */ = {
 			isa = PBXGroup;
 			children = (
-				127964A729FC17A700409F1E /* ViewController.swift */,
 				129AB33F29FC4C8700B6A53B /* Networking.swift */,
 				129AB33D29FC4C5900B6A53B /* Model.swift */,
+				127964A729FC17A700409F1E /* ViewController.swift */,
 				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
 				127964A929FC17A700409F1E /* Main.storyboard */,
 				127964AC29FC17A900409F1E /* Assets.xcassets */,
