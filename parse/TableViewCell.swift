@@ -24,14 +24,3 @@ class TableViewCell: UITableViewCell {
     }
 
 }
-
-
-
-/// НАСТРОЙКА SEARCH BAR
-
-// let textFieldInsideUISearchBar = self.searchBar.value(forKey: "searchField") as? UITextField
-// textFieldInsideUISearchBar?.textColor = UIColor.red
-// textFieldInsideUISearchBar?.font = textFieldInsideUISearchBar?.font?.withSize(12)
-//
-// let labelInsideUISearchBar = textFieldInsideUISearchBar!.value(forKey: "placeholderLabel") as? UILabel
-// labelInsideUISearchBar?.textColor = UIColor.red

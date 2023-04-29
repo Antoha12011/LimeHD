@@ -62,7 +62,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 100
     }
 }
- 
+
+// MARK: - НАСТРОЙКИ SEARCH BAR
+
 extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
