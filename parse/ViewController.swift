@@ -23,6 +23,8 @@ class ViewController: UIViewController {
             }
         }
     }
+
+    
     
 }
 
@@ -45,6 +47,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.myLabel.text = newsData[indexPath.row].name_ru
         
         if let imageURL = URL(string: newsData[indexPath.row].image) {
+            
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -54,6 +57,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
+            
         }
         
         // cell.textLabel?.text = newsData[indexPath.row].name_ru
