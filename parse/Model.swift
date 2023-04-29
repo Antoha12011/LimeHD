@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct NewsFeed: Decodable {
-    var channels: [Channels]
+ struct NewsFeed: Decodable {
+     var channels: [Channels]
 }
 
-struct Channels: Decodable {
-    var name_ru: String
-    var image: String
+ struct Channels: Decodable {
+     var name_ru: String
+     var image: String
 }

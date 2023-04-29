@@ -12,9 +12,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var newsData = [Channels]()
+    var filteredData = [Channels]()
+    // var serchingData = [String]()
+    
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         parsingJson { data in
             self.newsData = data
             
@@ -24,29 +31,23 @@ class ViewController: UIViewController {
         }
     }
 
-    
-    
+   
 }
-
-
-
-
-
 
 // MARK: - НАСТРОЙКА ТАБЛИЦЫ
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsData.count
+        return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
         
-        cell.myLabel.text = newsData[indexPath.row].name_ru
+        cell.myLabel.text = filteredData[indexPath.row].name_ru
         
-        if let imageURL = URL(string: newsData[indexPath.row].image) {
+        if let imageURL = URL(string: filteredData[indexPath.row].image) {
             
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
@@ -66,10 +67,34 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+}
+ 
+// MARK: - НАСТРОЙКИ SEARCH BAR, ЧТОБЫ ВСЕ ОТОБРАЖАЛОСЬ КАК РАНЬШЕ УДАЛИТЬ ЭТУ ЧАСТЬ
+
+extension ViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filteredData = []
+        
+        if searchText == "" {
+            filteredData = newsData
+        } else {
+            
+            for item in newsData {
+                if item.name_ru.lowercased().contains(searchText.lowercased()) {
+                    filteredData.append(item)
+                }
+            }
+        }
+        self.tableView.reloadData()
+        
+        
+    }
     
 }
     
-   
-    
+
+
 
 
