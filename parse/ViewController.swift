@@ -63,27 +63,41 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
  
-// MARK: - НАСТРОЙКИ SEARCH BAR, ЧТОБЫ ВСЕ ОТОБРАЖАЛОСЬ КАК РАНЬШЕ УДАЛИТЬ ЭТУ ЧАСТЬ
-
 extension ViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredData = []
-        
-        if searchText == "" {
-            filteredData = newsData
+        if searchText != "" {
+            filteredData = newsData.filter({$0.name_ru.contains(searchText)})
+            tableView.reloadData()
         } else {
-            for item in newsData {
-                if item.name_ru.lowercased().contains(searchText.lowercased()) {
-                    filteredData.append(item)
-                }
-            }
+            self.filteredData = newsData
+            tableView.reloadData()
         }
-        self.tableView.reloadData()
     }
-    
 }
+
+
+// MARK: - НАСТРОЙКИ SEARCH BAR, ЧТОБЫ ВСЕ ОТОБРАЖАЛОСЬ КАК РАНЬШЕ УДАЛИТЬ ЭТУ ЧАСТЬ
+
+//extension ViewController: UISearchBarDelegate {
+//
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//
+//        filteredData = []
+//
+//        if searchText == "" {
+//            filteredData = newsData
+//        } else {
+//            for item in newsData {
+//                if item.name_ru.lowercased().contains(searchText.lowercased()) {
+//                    filteredData.append(item)
+//                }
+//            }
+//        }
+//        self.tableView.reloadData()
+//    }
+//
+//}
     
 
 
