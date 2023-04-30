@@ -9,12 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
     var newsData = [Channels]()
     var filteredData = [Channels]()
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var segment: UISegmentedControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

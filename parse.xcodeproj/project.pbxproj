@@ -50,6 +50,8 @@
 		1279649729FC17A700409F1E = {
 			isa = PBXGroup;
 			children = (
+				128B66E529FEE34A00462A77 /* Models */,
+				128B66E329FEE31B00462A77 /* ViewControllers */,
 				129AB34129FC4CEA00B6A53B /* Application */,
 				127964A229FC17A700409F1E /* parse */,
 			);
@@ -58,18 +60,40 @@
 		127964A229FC17A700409F1E /* parse */ = {
 			isa = PBXGroup;
 			children = (
-				129AB33F29FC4C8700B6A53B /* Networking.swift */,
-				129AB33D29FC4C5900B6A53B /* Model.swift */,
-				127964A729FC17A700409F1E /* ViewController.swift */,
-				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
 				127964A929FC17A700409F1E /* Main.storyboard */,
-				128B66DF29FEE22F00462A77 /* FavoritesTableViewCell.swift */,
-				128B66E129FEE24100462A77 /* FavoritesViewController.swift */,
 				127964AC29FC17A900409F1E /* Assets.xcassets */,
 				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
 				127964B129FC17A900409F1E /* Info.plist */,
 			);
 			path = parse;
+			sourceTree = "<group>";
+		};
+		128B66E329FEE31B00462A77 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				128B66E129FEE24100462A77 /* FavoritesViewController.swift */,
+				127964A729FC17A700409F1E /* ViewController.swift */,
+				128B66E429FEE32C00462A77 /* Cells */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		128B66E429FEE32C00462A77 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				128B66DF29FEE22F00462A77 /* FavoritesTableViewCell.swift */,
+				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		128B66E529FEE34A00462A77 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				129AB33F29FC4C8700B6A53B /* Networking.swift */,
+				129AB33D29FC4C5900B6A53B /* Model.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		129AB34129FC4CEA00B6A53B /* Application */ = {
