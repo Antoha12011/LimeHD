@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     var newsData = [Channels]()
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 
 }
 

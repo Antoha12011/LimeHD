@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +97,9 @@
                                     <segment title="Все"/>
                                     <segment title="Избранные"/>
                                 </segments>
+                                <connections>
+                                    <segue destination="I5K-JA-ABG" kind="show" id="VwQ-La-DWm"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -128,17 +131,28 @@
         <!--Favorites View Controller-->
         <scene sceneID="wwZ-eC-Bj0">
             <objects>
-                <viewController id="I5K-JA-ABG" customClass="FavoritesViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="I5K-JA-ABG" customClass="FavoritesViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJK-FY-N7q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8up-Va-TQg">
+                                <rect key="frame" x="0.0" y="132" width="414" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Избранные"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s2s-l2-PYv"/>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="HSc-lz-CWG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvR-dP-m69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245" y="98"/>
+            <point key="canvasLocation" x="1314.4927536231885" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hVq-tK-qCu">
