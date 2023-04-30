@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var newsData = [Channels]()
     var filteredData = [Channels]()
+
    
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -42,6 +43,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
         
         cell.myLabel.text = filteredData[indexPath.row].name_ru
+        cell.discriptionLbl.text = filteredData[indexPath.row].current.title 
+        
         
         if let imageURL = URL(string: filteredData[indexPath.row].image) {
             

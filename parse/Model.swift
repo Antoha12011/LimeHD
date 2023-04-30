@@ -8,10 +8,17 @@
 import Foundation
 
  struct NewsFeed: Decodable {
-     var channels: [Channels]
+     let channels: [Channels]
 }
 
  struct Channels: Decodable {
-     var name_ru: String
-     var image: String
+     let name_ru: String
+     let image: String
+     let current: CurrentChannels
 }
+
+struct CurrentChannels: Decodable {
+    let title: String
+}
+
+

@@ -53,19 +53,34 @@
                                                         <constraint firstAttribute="height" constant="80" id="eLc-bC-PSz"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hD3-lo-CuF">
+                                                    <rect key="frame" x="124" y="30" width="270" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="270" id="SmQ-AH-gdm"/>
+                                                        <constraint firstAttribute="height" constant="39" id="UDh-fI-XRM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="hAt-w2-L6b" secondAttribute="trailing" constant="20" symbolic="YES" id="9Eg-LR-Qs5"/>
                                                 <constraint firstAttribute="bottom" secondItem="hAt-w2-L6b" secondAttribute="bottom" constant="58" id="Bff-YV-Oag"/>
+                                                <constraint firstItem="hD3-lo-CuF" firstAttribute="leading" secondItem="czH-OH-d15" secondAttribute="trailing" constant="24" id="DKp-gc-bDO"/>
                                                 <constraint firstItem="czH-OH-d15" firstAttribute="leading" secondItem="f2E-Na-5yu" secondAttribute="leading" constant="20" symbolic="YES" id="Jss-31-oWm"/>
                                                 <constraint firstItem="hAt-w2-L6b" firstAttribute="top" secondItem="f2E-Na-5yu" secondAttribute="top" constant="5" id="SHU-1s-X1t"/>
+                                                <constraint firstItem="hD3-lo-CuF" firstAttribute="top" secondItem="f2E-Na-5yu" secondAttribute="topMargin" constant="19" id="T13-or-xqL"/>
+                                                <constraint firstItem="hD3-lo-CuF" firstAttribute="trailing" secondItem="f2E-Na-5yu" secondAttribute="trailingMargin" id="kWw-zy-RdC"/>
                                                 <constraint firstItem="czH-OH-d15" firstAttribute="top" secondItem="f2E-Na-5yu" secondAttribute="top" constant="10" id="kXh-Og-OzB"/>
                                                 <constraint firstItem="hAt-w2-L6b" firstAttribute="leading" secondItem="czH-OH-d15" secondAttribute="trailing" constant="24" id="klw-Gr-LOg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="hD3-lo-CuF" secondAttribute="bottom" constant="20" id="p9n-bf-jUg"/>
                                                 <constraint firstAttribute="bottom" secondItem="czH-OH-d15" secondAttribute="bottom" constant="10" id="zeR-Xv-D1X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="discriptionLbl" destination="hD3-lo-CuF" id="vh8-Z1-4Yd"/>
                                             <outlet property="myImage" destination="czH-OH-d15" id="9CQ-dM-0kp"/>
                                             <outlet property="myLabel" destination="hAt-w2-L6b" id="bL0-M0-MHv"/>
                                         </connections>
