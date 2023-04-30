@@ -6,19 +6,26 @@
 //
 
 import UIKit
+import LZViewPager
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var viewPager: LZViewPager!
+    
+    
     var newsData = [Channels]()
     var filteredData = [Channels]()
-
+    
+    private var subControllers: [UIViewController] = []
    
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewPagerProperties()
         
         parsingJson { data in
             self.newsData = data
@@ -28,6 +35,21 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func viewPagerProperties() {
+        viewPager.delegate = self
+        viewPager.dataSource = self
+        viewPager.hostController = self
+        
+        let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")
+        vc1.title = "Все"
+        let vc2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController")
+        vc2.title = "Избранные"
+        
+        subControllers = [vc1, vc2]
+        viewPager.reload()
+    }
+    
 
 }
 
@@ -43,8 +65,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
         
         cell.myLabel.text = filteredData[indexPath.row].name_ru
-        cell.discriptionLbl.text = filteredData[indexPath.row].current.title 
-        
+        cell.discriptionLbl.text = filteredData[indexPath.row].current.title
         
         if let imageURL = URL(string: filteredData[indexPath.row].image) {
             
@@ -80,6 +101,32 @@ extension ViewController: UISearchBarDelegate {
         }
     }
 }
+
+extension ViewController: LZViewPagerDelegate, LZViewPagerDataSource {
+    
+    func numberOfItems() -> Int {
+        return self.subControllers.count
+    }
+    
+    func controller(at index: Int) -> UIViewController {
+        return subControllers[index]
+    }
+    
+    func button(at index: Int) -> UIButton {
+        let button = UIButton()
+        
+        button.setTitleColor(UIColor.gray, for: .normal)
+        button.setTitleColor(UIColor.white, for: .selected)
+        
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.backgroundColor = UIColor.black
+        
+        return button
+    }
+}
+    
+    
+
 
 
 // MARK: - НАСТРОЙКИ SEARCH BAR, ЧТОБЫ ВСЕ ОТОБРАЖАЛОСЬ КАК РАНЬШЕ УДАЛИТЬ ЭТУ ЧАСТЬ

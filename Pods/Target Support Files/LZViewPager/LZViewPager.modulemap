@@ -1,0 +1,6 @@
+framework module LZViewPager {
+  umbrella header "LZViewPager-umbrella.h"
+
+  export *
+  module * { export * }
+}
