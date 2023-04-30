@@ -13,13 +13,14 @@
 		127964AB29FC17A700409F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964A929FC17A700409F1E /* Main.storyboard */; };
 		127964AD29FC17A900409F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127964AC29FC17A900409F1E /* Assets.xcassets */; };
 		127964B029FC17A900409F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964AE29FC17A900409F1E /* LaunchScreen.storyboard */; };
+		128B66E029FEE22F00462A77 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B66DF29FEE22F00462A77 /* FavoritesTableViewCell.swift */; };
+		128B66E229FEE24100462A77 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B66E129FEE24100462A77 /* FavoritesViewController.swift */; };
 		129AB33E29FC4C5900B6A53B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33D29FC4C5900B6A53B /* Model.swift */; };
 		129AB34029FC4C8700B6A53B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33F29FC4C8700B6A53B /* Networking.swift */; };
 		129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB34329FC504E00B6A53B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		124DD85329FED3EF00C781F5 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 		127964A329FC17A700409F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127964A529FC17A700409F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		127964A729FC17A700409F1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +28,9 @@
 		127964AC29FC17A900409F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127964AF29FC17A900409F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127964B129FC17A900409F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		128B66DE29FEE1EC00462A77 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
+		128B66DF29FEE22F00462A77 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		128B66E129FEE24100462A77 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		129AB33D29FC4C5900B6A53B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				127964A729FC17A700409F1E /* ViewController.swift */,
 				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
 				127964A929FC17A700409F1E /* Main.storyboard */,
+				128B66DF29FEE22F00462A77 /* FavoritesTableViewCell.swift */,
+				128B66E129FEE24100462A77 /* FavoritesViewController.swift */,
 				127964AC29FC17A900409F1E /* Assets.xcassets */,
 				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
 				127964B129FC17A900409F1E /* Info.plist */,
@@ -92,7 +98,7 @@
 			);
 			name = parse;
 			productName = parse;
-			productReference = 124DD85329FED3EF00C781F5 /* parse.app */;
+			productReference = 128B66DE29FEE1EC00462A77 /* parse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,10 +154,12 @@
 			files = (
 				127964A829FC17A700409F1E /* ViewController.swift in Sources */,
 				129AB34029FC4C8700B6A53B /* Networking.swift in Sources */,
+				128B66E229FEE24100462A77 /* FavoritesViewController.swift in Sources */,
 				127964A429FC17A700409F1E /* AppDelegate.swift in Sources */,
 				129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */,
 				127964A629FC17A700409F1E /* SceneDelegate.swift in Sources */,
 				129AB33E29FC4C5900B6A53B /* Model.swift in Sources */,
+				128B66E029FEE22F00462A77 /* FavoritesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xVy-EE-jbp">
-                                <rect key="frame" x="0.0" y="146" width="414" height="750"/>
+                                <rect key="frame" x="0.0" y="177" width="414" height="719"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="J0f-yw-vma" customClass="TableViewCell" customModule="parse" customModuleProvider="target">
@@ -91,15 +91,27 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bud-Hu-UOj"/>
                                 </connections>
                             </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-Hb-jYN">
+                                <rect key="frame" x="0.0" y="132" width="414" height="32"/>
+                                <segments>
+                                    <segment title="Все"/>
+                                    <segment title="Избранные"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xVy-EE-jbp" firstAttribute="top" secondItem="BLu-Zv-DeQ" secondAttribute="bottom" constant="14" id="MgF-nb-iep"/>
+                            <constraint firstItem="xVy-EE-jbp" firstAttribute="top" secondItem="BLu-Zv-DeQ" secondAttribute="bottom" constant="45" id="2Nb-tF-Aea"/>
                             <constraint firstItem="xVy-EE-jbp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SJD-Ji-4mY"/>
                             <constraint firstItem="xVy-EE-jbp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZLw-tw-rhv"/>
                             <constraint firstAttribute="bottom" secondItem="xVy-EE-jbp" secondAttribute="bottom" id="hiV-Ke-erG"/>
+                            <constraint firstItem="Swa-Hb-jYN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iqT-az-WFI"/>
+                            <constraint firstItem="Swa-Hb-jYN" firstAttribute="top" secondItem="BLu-Zv-DeQ" secondAttribute="bottom" id="jit-dD-1wQ"/>
+                            <constraint firstItem="Swa-Hb-jYN" firstAttribute="top" secondItem="BLu-Zv-DeQ" secondAttribute="bottom" id="ly5-fS-0dK"/>
+                            <constraint firstItem="Swa-Hb-jYN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sjd-sf-Dkp"/>
+                            <constraint firstItem="xVy-EE-jbp" firstAttribute="top" secondItem="Swa-Hb-jYN" secondAttribute="bottom" constant="14" id="wSe-7j-gjv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WUD-3d-bb9"/>
@@ -111,6 +123,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="444.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="wwZ-eC-Bj0">
+            <objects>
+                <viewController id="I5K-JA-ABG" customClass="FavoritesViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qJK-FY-N7q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="s2s-l2-PYv"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvR-dP-m69" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="98"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hVq-tK-qCu">
