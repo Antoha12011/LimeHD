@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var allChannelsBtn: UIButton!
     
     
     override func viewDidLoad() {
@@ -28,7 +29,6 @@ class ViewController: UIViewController {
         }
     }
     
-
 }
 
 // MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData

@@ -139,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WUD-3d-bb9"/>
                     <connections>
+                        <outlet property="allChannelsBtn" destination="WRD-Rx-nR0" id="wKm-PH-Dfg"/>
                         <outlet property="searchBar" destination="BLu-Zv-DeQ" id="hsb-lo-SZY"/>
                         <outlet property="tableView" destination="xVy-EE-jbp" id="XKa-oW-tew"/>
                     </connections>
@@ -147,10 +148,10 @@
             </objects>
             <point key="canvasLocation" x="656.52173913043487" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorit View Controller-->
         <scene sceneID="wlQ-O6-qNq">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="05h-Mv-mbb" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="05h-Mv-mbb" customClass="FavoritViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Huh-wE-JBT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +160,7 @@
                                 <rect key="frame" x="0.0" y="178" width="414" height="718"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="V8S-Bi-5fE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritCell" rowHeight="100" id="V8S-Bi-5fE" customClass="FavoritTableViewCell" customModule="parse" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V8S-Bi-5fE" id="NGD-6E-yh5">
@@ -210,6 +211,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="favoritDescription" destination="y4o-82-sng" id="gNu-oN-dZN"/>
+                                            <outlet property="favoritImage" destination="io9-Gs-M98" id="YY0-60-Gth"/>
+                                            <outlet property="favoritTitle" destination="ueT-fT-4gw" id="HyX-hV-rtW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -272,6 +278,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WE7-B0-Z00"/>
+                    <connections>
+                        <outlet property="favoritBtn" destination="zuZ-A9-p6s" id="qpy-NP-JPD"/>
+                        <outlet property="favoritSearchBar" destination="m9p-Gj-Uip" id="iyS-gc-Ce2"/>
+                        <outlet property="favoritTableView" destination="FC6-w3-ojG" id="s8X-k5-7Ko"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9j-MN-mdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
