@@ -13,15 +13,5 @@ class FavoritTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritTitle: UILabel!
     @IBOutlet weak var favoritDescription: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-       
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
 
 }
