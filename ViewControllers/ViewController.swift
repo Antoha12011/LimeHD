@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class ViewController: UIViewController {
     
     var newsData = [Channels]()
     var filteredData = [Channels]()
+
+    let avPlayerViewController = AVPlayerViewController()
+    var avPlayer: AVPlayer?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,6 +24,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
+
+        if let url = movieUrl {
+            self.avPlayer = AVPlayer(url: url as URL)
+            self.avPlayerViewController.player = self.avPlayer
+        }
+        
         parsingJson { data in
             self.newsData = data
             
@@ -28,6 +41,12 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.present(self.avPlayerViewController, animated: true) {
+            self.avPlayerViewController.player?.play()
+        }
+    }
 }
 
 // MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData

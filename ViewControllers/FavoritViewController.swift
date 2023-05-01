@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class FavoritViewController: UIViewController {
 
     var newsData = [Channels]()
     var filteredData = [Channels]()
+    
+    let avPlayerViewController = AVPlayerViewController()
+    var avPlayer: AVPlayer?
     
     @IBOutlet weak var favoritSearchBar: UISearchBar!
     @IBOutlet weak var favoritTableView: UITableView!
@@ -19,6 +24,14 @@ class FavoritViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
+
+        if let url = movieUrl {
+            self.avPlayer = AVPlayer(url: url as URL)
+            self.avPlayerViewController.player = self.avPlayer
+        }
+        
         parsingJson { data in
             self.newsData = data
             
@@ -26,9 +39,14 @@ class FavoritViewController: UIViewController {
                 self.favoritTableView.reloadData()
             }
         }
-        
     }
-
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.present(self.avPlayerViewController, animated: true) {
+            self.avPlayerViewController.player?.play()
+        }
+    }
+    
 }
 
 // MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData
@@ -63,6 +81,9 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    
+    
 }
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
