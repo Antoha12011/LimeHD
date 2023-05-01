@@ -16,6 +16,7 @@ class FavoritViewController: UIViewController {
     
     let avPlayerViewController = AVPlayerViewController()
     var avPlayer: AVPlayer?
+    let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
     
     @IBOutlet weak var favoritSearchBar: UISearchBar!
     @IBOutlet weak var favoritTableView: UITableView!
@@ -24,20 +25,20 @@ class FavoritViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
-
-        if let url = movieUrl {
-            self.avPlayer = AVPlayer(url: url as URL)
-            self.avPlayerViewController.player = self.avPlayer
-        }
-        
+        startVideo()
         parsingJson { data in
             self.newsData = data
             
             DispatchQueue.main.async {
                 self.favoritTableView.reloadData()
             }
+        }
+    }
+    
+    func startVideo() {
+        if let url = movieUrl {
+            self.avPlayer = AVPlayer(url: url as URL)
+            self.avPlayerViewController.player = self.avPlayer
         }
     }
     

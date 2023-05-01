@@ -16,6 +16,7 @@ class ViewController: UIViewController {
 
     let avPlayerViewController = AVPlayerViewController()
     var avPlayer: AVPlayer?
+    let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -24,29 +25,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
-
-        if let url = movieUrl {
-            self.avPlayer = AVPlayer(url: url as URL)
-            self.avPlayerViewController.player = self.avPlayer
-        }
-        
+        startVideo()
         parsingJson { data in
             self.newsData = data
-            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
     }
     
+    func startVideo() {
+        if let url = movieUrl {
+            self.avPlayer = AVPlayer(url: url as URL)
+            self.avPlayerViewController.player = self.avPlayer
+        }
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.present(self.avPlayerViewController, animated: true) {
             self.avPlayerViewController.player?.play()
         }
     }
+    
 }
 
 // MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData

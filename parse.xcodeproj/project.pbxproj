@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		121BBB9A2A00483F0092CB0E /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
+		121BBB9F2A0058790092CB0E /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 		1249CE6A2A0002B200C2DD22 /* FavoritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritViewController.swift; sourceTree = "<group>"; };
 		1249CE6C2A0002F300C2DD22 /* FavoritTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritTableViewCell.swift; sourceTree = "<group>"; };
 		127964A329FC17A700409F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			);
 			name = parse;
 			productName = parse;
-			productReference = 121BBB9A2A00483F0092CB0E /* parse.app */;
+			productReference = 121BBB9F2A0058790092CB0E /* parse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
