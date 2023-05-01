@@ -15,7 +15,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var segment: UISegmentedControl!
     
     
     override func viewDidLoad() {
