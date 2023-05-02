@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
 
 class FavoritViewController: UIViewController {
     
@@ -17,11 +15,6 @@ class FavoritViewController: UIViewController {
     
     // MARK: - Cell Identifier
     let cellIdentifier = "favoritCell"
-    
-    // MARK: - AVPlayer Properties
-    let avPlayerViewController = AVPlayerViewController()
-    var avPlayer: AVPlayer?
-    let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
     
     // MARK: - Outlets
     @IBOutlet weak var favoritSearchBar: UISearchBar!
@@ -38,15 +31,6 @@ class FavoritViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Запуск видео
-    func startVideo() {
-        if let url = movieUrl {
-            self.avPlayer = AVPlayer(url: url as URL)
-            self.avPlayerViewController.player = self.avPlayer
-        }
-    }
-    
 }
 
 // MARK: - UITableViewDelegate / UITableViewDataSource
@@ -80,8 +64,8 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.present(self.avPlayerViewController, animated: true) {
-            self.avPlayerViewController.player?.play()
+        self.present(avPlayerViewController, animated: true) {
+            avPlayerViewController.player?.play()
         }
     }
     
