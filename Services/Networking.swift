@@ -16,13 +16,10 @@ func parsingJson(completion: @escaping ([Channels]) -> ()) {
     guard url != nil else { return }
     
     let session = URLSession.shared
-    
     let dataTask = session.dataTask(with: url!) { data, response, error in
         
         if error == nil && data != nil {
-            
             let decoder = JSONDecoder()
-            
             do {
                 let ParsingData = try decoder.decode(NewsFeed.self, from: data!)
                 completion(ParsingData.channels)
@@ -32,5 +29,4 @@ func parsingJson(completion: @escaping ([Channels]) -> ()) {
         }
     }
     dataTask.resume()
-    
 }

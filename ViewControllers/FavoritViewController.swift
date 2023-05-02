@@ -12,8 +12,8 @@ import AVFoundation
 class FavoritViewController: UIViewController {
     
     // MARK: - Properties
-    var newsData = [Channels]()
-    var filteredData = [Channels]()
+    var channels = [Channels]()
+    var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
     let cellIdentifier = "favoritCell"
@@ -32,7 +32,7 @@ class FavoritViewController: UIViewController {
         super.viewDidLoad()
         startVideo()
         parsingJson { data in
-            self.newsData = data
+            self.channels = data
             DispatchQueue.main.async {
                 self.favoritTableView.reloadData()
             }
@@ -52,16 +52,16 @@ class FavoritViewController: UIViewController {
 // MARK: - UITableViewDelegate / UITableViewDataSource
 extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData.count
+        return filteredChannels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? FavoritTableViewCell else { return FavoritTableViewCell() }
         
-        cell.favoritTitle.text = filteredData[indexPath.row].name_ru
-        cell.favoritDescription.text = filteredData[indexPath.row].current.title
+        cell.favoritTitle.text = filteredChannels[indexPath.row].name_ru
+        cell.favoritDescription.text = filteredChannels[indexPath.row].current.title
         
-        if let imageURL = URL(string: filteredData[indexPath.row].image) {
+        if let imageURL = URL(string: filteredChannels[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -91,14 +91,14 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
 extension FavoritViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
-        filteredData = []
+        filteredChannels = []
         
         if searchText == "" {
-            filteredData = newsData
+            filteredChannels = channels
         } else {
-            for item in newsData {
+            for item in channels {
                 if item.name_ru.lowercased().contains(searchText.lowercased()) {
-                    filteredData.append(item)
+                    filteredChannels.append(item)
                 }
             }
         }

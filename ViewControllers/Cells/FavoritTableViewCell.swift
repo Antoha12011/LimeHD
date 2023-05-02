@@ -12,6 +12,4 @@ class FavoritTableViewCell: UITableViewCell {
     @IBOutlet weak var favoritImage: UIImageView!
     @IBOutlet weak var favoritTitle: UILabel!
     @IBOutlet weak var favoritDescription: UILabel!
-    
-
 }

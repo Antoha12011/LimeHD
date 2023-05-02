@@ -33,7 +33,7 @@
 		129AB33D29FC4C5900B6A53B /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		12D4AF972A0108EE00E2F47A /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
+		12DF45D92A012A7D00024B03 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +146,7 @@
 			);
 			name = parse;
 			productName = parse;
-			productReference = 12D4AF972A0108EE00E2F47A /* parse.app */;
+			productReference = 12DF45D92A012A7D00024B03 /* parse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
