@@ -15,13 +15,12 @@
 		127964AB29FC17A700409F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964A929FC17A700409F1E /* Main.storyboard */; };
 		127964AD29FC17A900409F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127964AC29FC17A900409F1E /* Assets.xcassets */; };
 		127964B029FC17A900409F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964AE29FC17A900409F1E /* LaunchScreen.storyboard */; };
-		129AB33E29FC4C5900B6A53B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33D29FC4C5900B6A53B /* Model.swift */; };
+		129AB33E29FC4C5900B6A53B /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33D29FC4C5900B6A53B /* Channels.swift */; };
 		129AB34029FC4C8700B6A53B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33F29FC4C8700B6A53B /* Networking.swift */; };
 		129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB34329FC504E00B6A53B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		121BBB9F2A0058790092CB0E /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 		1249CE6A2A0002B200C2DD22 /* FavoritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritViewController.swift; sourceTree = "<group>"; };
 		1249CE6C2A0002F300C2DD22 /* FavoritTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritTableViewCell.swift; sourceTree = "<group>"; };
 		127964A329FC17A700409F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,9 +30,10 @@
 		127964AC29FC17A900409F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127964AF29FC17A900409F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127964B129FC17A900409F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		129AB33D29FC4C5900B6A53B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		129AB33D29FC4C5900B6A53B /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		12D4AF972A0108EE00E2F47A /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,19 +50,19 @@
 		1279649729FC17A700409F1E = {
 			isa = PBXGroup;
 			children = (
-				128B66E529FEE34A00462A77 /* Models */,
-				128B66E329FEE31B00462A77 /* ViewControllers */,
-				129AB34129FC4CEA00B6A53B /* Application */,
 				127964A229FC17A700409F1E /* parse */,
+				128B66E329FEE31B00462A77 /* ViewControllers */,
+				128B66E529FEE34A00462A77 /* Models */,
+				12D4AF9A2A0109C900E2F47A /* Storyboards */,
+				12D4AF992A0109AA00E2F47A /* Source */,
+				12D4AF982A01098100E2F47A /* Services */,
+				129AB34129FC4CEA00B6A53B /* SupportingFiles */,
 			);
 			sourceTree = "<group>";
 		};
 		127964A229FC17A700409F1E /* parse */ = {
 			isa = PBXGroup;
 			children = (
-				127964A929FC17A700409F1E /* Main.storyboard */,
-				127964AC29FC17A900409F1E /* Assets.xcassets */,
-				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
 				127964B129FC17A900409F1E /* Info.plist */,
 			);
 			path = parse;
@@ -90,19 +90,43 @@
 		128B66E529FEE34A00462A77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				129AB33F29FC4C8700B6A53B /* Networking.swift */,
-				129AB33D29FC4C5900B6A53B /* Model.swift */,
+				129AB33D29FC4C5900B6A53B /* Channels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		129AB34129FC4CEA00B6A53B /* Application */ = {
+		129AB34129FC4CEA00B6A53B /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
 				127964A329FC17A700409F1E /* AppDelegate.swift */,
 				127964A529FC17A700409F1E /* SceneDelegate.swift */,
 			);
-			path = Application;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		12D4AF982A01098100E2F47A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				129AB33F29FC4C8700B6A53B /* Networking.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		12D4AF992A0109AA00E2F47A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				127964AC29FC17A900409F1E /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		12D4AF9A2A0109C900E2F47A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
+				127964A929FC17A700409F1E /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +146,7 @@
 			);
 			name = parse;
 			productName = parse;
-			productReference = 121BBB9F2A0058790092CB0E /* parse.app */;
+			productReference = 12D4AF972A0108EE00E2F47A /* parse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -183,7 +207,7 @@
 				127964A429FC17A700409F1E /* AppDelegate.swift in Sources */,
 				129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */,
 				127964A629FC17A700409F1E /* SceneDelegate.swift in Sources */,
-				129AB33E29FC4C5900B6A53B /* Model.swift in Sources */,
+				129AB33E29FC4C5900B6A53B /* Channels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
