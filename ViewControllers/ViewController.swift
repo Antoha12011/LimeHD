@@ -6,22 +6,27 @@
 //
 
 import UIKit
-import AVFoundation
 import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
+    // MARK: - Properties
     var newsData = [Channels]()
     var filteredData = [Channels]()
-
+    
+    // MARK: - Cell Identifier
+    let cellIdentifier = "cell"
+    
+    // MARK: - AVPlayer Properties
     let avPlayerViewController = AVPlayerViewController()
     var avPlayer: AVPlayer?
     let movieUrl: NSURL? = NSURL(string: "http://techslides.com/demos/sample-videos/small.mp4")
     
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var allChannelsBtn: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +39,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // MARK: - Запуск видео
     func startVideo() {
         if let url = movieUrl {
             self.avPlayer = AVPlayer(url: url as URL)
@@ -41,30 +47,22 @@ class ViewController: UIViewController {
         }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.present(self.avPlayerViewController, animated: true) {
-            self.avPlayerViewController.player?.play()
-        }
-    }
-    
 }
 
-// MARK: - НАСТРОЙКА ТАБЛИЦЫ - Чтобы все работало нормально но без search поставить везде newsData
+// MARK: - UITableViewDelegate / UITableViewDataSource
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TableViewCell else { return UITableViewCell() }
         
         cell.myLabel.text = filteredData[indexPath.row].name_ru
         cell.discriptionLbl.text = filteredData[indexPath.row].current.title
         
         if let imageURL = URL(string: filteredData[indexPath.row].image) {
-            
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -81,46 +79,34 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.present(self.avPlayerViewController, animated: true) {
+            self.avPlayerViewController.player?.play()
+        }
+    }
+    
 }
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
-
 extension ViewController: UISearchBarDelegate {
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText != "" {
-            filteredData = newsData.filter({$0.name_ru.contains(searchText)})
-            tableView.reloadData()
+        
+        filteredData = []
+        
+        if searchText == "" {
+            filteredData = newsData
         } else {
-            self.filteredData = newsData
-            tableView.reloadData()
+            for item in newsData {
+                if item.name_ru.lowercased().contains(searchText.lowercased()) {
+                    filteredData.append(item)
+                }
+            }
         }
+        self.tableView.reloadData()
     }
 }
 
-
-// MARK: - НАСТРОЙКИ SEARCH BAR, ЧТОБЫ ВСЕ ОТОБРАЖАЛОСЬ КАК РАНЬШЕ УДАЛИТЬ ЭТУ ЧАСТЬ
-
-//extension ViewController: UISearchBarDelegate {
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//
-//        filteredData = []
-//
-//        if searchText == "" {
-//            filteredData = newsData
-//        } else {
-//            for item in newsData {
-//                if item.name_ru.lowercased().contains(searchText.lowercased()) {
-//                    filteredData.append(item)
-//                }
-//            }
-//        }
-//        self.tableView.reloadData()
-//    }
-//
-//}
-    
 
 
 
