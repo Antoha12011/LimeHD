@@ -21,7 +21,7 @@ func parsingJson(completion: @escaping ([Channels]) -> ()) {
         if error == nil && data != nil {
             let decoder = JSONDecoder()
             do {
-                let ParsingData = try decoder.decode(NewsFeed.self, from: data!)
+                let ParsingData = try decoder.decode(JsonData.self, from: data!)
                 completion(ParsingData.channels)
             } catch {
                 print("Error: \(error.localizedDescription)")

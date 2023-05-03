@@ -7,7 +7,7 @@
 
 import Foundation
 
- struct NewsFeed: Decodable {
+ struct JsonData: Decodable {
      let channels: [Channels]
 }
 
