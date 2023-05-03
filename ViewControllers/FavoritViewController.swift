@@ -65,7 +65,7 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.present(avPlayerViewController, animated: true) {
+        present(avPlayerViewController, animated: true) {
             avPlayerViewController.player?.play()
         }
     }
@@ -87,7 +87,7 @@ extension FavoritViewController: UISearchBarDelegate {
                 }
             }
         }
-        self.favoritTableView.reloadData()
+        favoritTableView.reloadData()
     }
 }
 
