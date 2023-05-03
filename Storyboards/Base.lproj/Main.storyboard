@@ -97,7 +97,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRD-Rx-nR0">
                                 <rect key="frame" x="29" y="132" width="107" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="107" id="JgL-li-OaP"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="JgL-li-OaP"/>
                                     <constraint firstAttribute="height" constant="31" id="qRs-Le-IhO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -108,7 +108,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHc-MG-Was">
                                 <rect key="frame" x="144" y="128" width="159" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="2fz-gS-VwY"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="2fz-gS-VwY"/>
                                     <constraint firstAttribute="height" constant="39" id="jaB-uY-sB3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -192,7 +192,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueT-fT-4gw">
                                                     <rect key="frame" x="124" y="5" width="230" height="37"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="230" id="SjO-wR-789"/>
                                                         <constraint firstAttribute="height" constant="37" id="c4e-Lz-OJ9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
@@ -202,7 +201,6 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4o-82-sng">
                                                     <rect key="frame" x="124" y="30" width="230" height="39"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="230" id="8tf-8V-uUq"/>
                                                         <constraint firstAttribute="height" constant="39" id="O7U-Xd-J0y"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -242,7 +240,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-F5-dh4">
                                 <rect key="frame" x="29" y="139" width="99" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="3wr-3y-fhy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="3wr-3y-fhy"/>
                                     <constraint firstAttribute="height" constant="31" id="kGm-aV-UgV"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -257,7 +255,7 @@
                                 <rect key="frame" x="144" y="135" width="159" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="96q-o8-FHo"/>
-                                    <constraint firstAttribute="width" constant="159" id="pVe-lE-dkQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="pVe-lE-dkQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Избранные">
