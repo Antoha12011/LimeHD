@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        changeColorTextField()
         startVideo()
         parsingJson { data in
             self.channels = data
@@ -30,6 +32,10 @@ class ViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    // MARK: - Смена цвета текста в search bar
+    func changeColorTextField() {
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
     }
 }
 

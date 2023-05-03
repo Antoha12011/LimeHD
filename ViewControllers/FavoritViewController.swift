@@ -23,6 +23,7 @@ class FavoritViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         startVideo()
         parsingJson { data in
             self.channels = data
