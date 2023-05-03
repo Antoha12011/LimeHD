@@ -74,7 +74,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             startVideo()
         }
     }
-    
 }
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
