@@ -15,6 +15,6 @@ class TableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        self.myImage.image = nil
+        myImage.image = nil
     }
 }

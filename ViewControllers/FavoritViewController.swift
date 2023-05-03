@@ -10,8 +10,8 @@ import UIKit
 class FavoritViewController: UIViewController {
     
     // MARK: - Properties
-    var channels = [Channels]()
-    var filteredChannels = [Channels]()
+    private var channels = [Channels]()
+    private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
     let cellIdentifier = "favoritCell"
@@ -24,7 +24,7 @@ class FavoritViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        startVideo()
+        
         parsingJson { data in
             self.channels = data
             DispatchQueue.main.async {
@@ -66,7 +66,7 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         present(avPlayerViewController, animated: true) {
-            avPlayerViewController.player?.play()
+           startVideo()
         }
     }
     

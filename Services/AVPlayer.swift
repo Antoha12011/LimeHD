@@ -19,5 +19,6 @@ func startVideo() {
     if let url = movieUrl {
         avPlayer = AVPlayer(url: url as URL)
         avPlayerViewController.player = avPlayer
+        avPlayerViewController.player?.play()
     }
 }

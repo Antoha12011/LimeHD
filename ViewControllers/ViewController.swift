@@ -10,8 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Properties
-    var channels = [Channels]()
-    var filteredChannels = [Channels]()
+    private var channels = [Channels]()
+    private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
     let cellIdentifier = "cell"
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         changeColorTextField()
-        startVideo()
+       
         parsingJson { data in
             self.channels = data
             DispatchQueue.main.async {
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         }
     }
     // MARK: - Смена цвета текста в search bar
-    func changeColorTextField() {
+   private func changeColorTextField() {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
     }
 }
@@ -72,7 +72,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         present(avPlayerViewController, animated: true) {
-            avPlayerViewController.player?.play()
+            startVideo()
         }
     }
     
