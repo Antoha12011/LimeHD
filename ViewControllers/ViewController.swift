@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
-    let cellIdentifier = "cell"
+    private let cellIdentifier = "cell"
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -34,13 +34,12 @@ class ViewController: UIViewController {
         }
     }
     // MARK: - Смена цвета текста в search bar
-   private func changeColorTextField() {
+    private func changeColorTextField() {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
     }
 }
 
 // MARK: - UITableViewDelegate / UITableViewDataSource
-
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredChannels.count

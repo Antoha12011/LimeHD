@@ -14,7 +14,7 @@ class FavoritViewController: UIViewController {
     private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
-    let cellIdentifier = "favoritCell"
+    private let cellIdentifier = "favoritCell"
     
     // MARK: - Outlets
     @IBOutlet weak var favoritSearchBar: UISearchBar!
