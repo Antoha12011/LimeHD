@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritTableViewCell: UITableViewCell {
+final class FavoritTableViewCell: UITableViewCell {
 
     @IBOutlet weak var favoritImage: UIImageView!
     @IBOutlet weak var favoritTitle: UILabel!

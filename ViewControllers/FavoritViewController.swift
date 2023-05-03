@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritViewController: UIViewController {
+final class FavoritViewController: UIViewController {
     
     // MARK: - Properties
     private var channels = [Channels]()
