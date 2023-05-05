@@ -12,7 +12,7 @@ final class FavoritViewController: UIViewController {
     // MARK: - Properties
     
     private var channels = [Channels]()
-    private var filteredChannels = [Channels]()
+    
     
     // MARK: - Cell Identifier
     
@@ -27,7 +27,6 @@ final class FavoritViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         parsingJson { data in
             self.channels = data
             DispatchQueue.main.async {
@@ -41,16 +40,16 @@ final class FavoritViewController: UIViewController {
 
 extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredChannels.count
+        return channels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? FavoritTableViewCell else { return FavoritTableViewCell() }
         
-        cell.favoritTitle.text = filteredChannels[indexPath.row].name_ru
-        cell.favoritDescription.text = filteredChannels[indexPath.row].current.title
+        cell.favoritTitle.text = channels[indexPath.row].name_ru
+        cell.favoritDescription.text = channels[indexPath.row].current.title
         
-        if let imageURL = URL(string: filteredChannels[indexPath.row].image) {
+        if let imageURL = URL(string: channels[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -76,24 +75,5 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     
 }
 
-// MARK: - НАСТРОЙКИ SEARCH BAR
-
-extension FavoritViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredChannels = []
-        
-        if searchText == "" {
-            filteredChannels = channels
-        } else {
-            for item in channels {
-                if item.name_ru.lowercased().contains(searchText.lowercased()) {
-                    filteredChannels.append(item)
-                }
-            }
-        }
-        favoritTableView.reloadData()
-    }
-}
 
 

@@ -18,14 +18,15 @@ func parsingJson(completion: @escaping ([Channels]) -> ()) {
     let session = URLSession.shared
     let _ = session.dataTask(with: url!) { data, response, error in
         
-        if error == nil && data != nil {
-            let decoder = JSONDecoder()
-            do {
-                let ParsingData = try decoder.decode(JsonData.self, from: data!)
-                completion(ParsingData.channels)
-            } catch {
-                print("Error: \(error.localizedDescription)")
-            }
+        guard error == nil && data != nil else { return }
+        
+        let decoder = JSONDecoder()
+        do {
+            let ParsingData = try decoder.decode(JsonData.self, from: data!)
+            completion(ParsingData.channels)
+        } catch {
+            print("Error: \(error.localizedDescription)")
         }
+        
     }.resume()
 }
