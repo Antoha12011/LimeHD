@@ -15,6 +15,7 @@ final class FavoritTableViewCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        
         favoritImage.image = nil
     }
 }
