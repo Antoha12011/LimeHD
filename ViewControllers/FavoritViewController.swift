@@ -10,13 +10,16 @@ import UIKit
 final class FavoritViewController: UIViewController {
     
     // MARK: - Properties
+    
     private var channels = [Channels]()
     private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
+    
     private let cellIdentifier = "favoritCell"
     
     // MARK: - Outlets
+    
     @IBOutlet weak var favoritSearchBar: UISearchBar!
     @IBOutlet weak var favoritTableView: UITableView!
     @IBOutlet weak var favoritBtn: UIButton!
@@ -35,6 +38,7 @@ final class FavoritViewController: UIViewController {
 }
 
 // MARK: - UITableViewDelegate / UITableViewDataSource
+
 extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredChannels.count
@@ -73,6 +77,7 @@ extension FavoritViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
+
 extension FavoritViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         

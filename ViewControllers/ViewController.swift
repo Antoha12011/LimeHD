@@ -10,13 +10,16 @@ import UIKit
 final class ViewController: UIViewController {
     
     // MARK: - Properties
+    
     private var channels = [Channels]()
     private var filteredChannels = [Channels]()
     
     // MARK: - Cell Identifier
+    
     private let cellIdentifier = "cell"
     
     // MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var allChannelsBtn: UIButton!
@@ -34,12 +37,14 @@ final class ViewController: UIViewController {
         }
     }
     // MARK: - Смена цвета текста в search bar
+    
     private func changeColorTextField() {
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor = .white
     }
 }
 
 // MARK: - UITableViewDelegate / UITableViewDataSource
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredChannels.count
@@ -77,6 +82,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
+
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
