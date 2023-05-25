@@ -9,7 +9,7 @@ import Foundation
 
 func parsingJson(completion: @escaping ([Channels]) -> ()) {
     
-    let urlString = "https://limehd.online/playlist/channels.json"
+    let urlString = "http://limehd.online/playlist/channels.json"
     
     let url = URL(string: urlString)
     
@@ -30,3 +30,4 @@ func parsingJson(completion: @escaping ([Channels]) -> ()) {
         
     }.resume()
 }
+ 
