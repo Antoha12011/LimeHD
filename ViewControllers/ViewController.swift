@@ -47,16 +47,16 @@ final class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredChannels.count
+        return channels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? TableViewCell else { return UITableViewCell() }
         
-        cell.myLabel.text = filteredChannels[indexPath.row].name_ru
-        cell.discriptionLbl.text = filteredChannels[indexPath.row].current.title
+        cell.myLabel.text = channels[indexPath.row].name_ru
+        cell.discriptionLbl.text = channels[indexPath.row].current.title
         
-        if let imageURL = URL(string: filteredChannels[indexPath.row].image) {
+        if let imageURL = URL(string: channels[indexPath.row].image) {
             DispatchQueue.global().async {
                 let data = try? Data(contentsOf: imageURL)
                 if let data = data {
@@ -83,23 +83,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - НАСТРОЙКИ SEARCH BAR
 
-extension ViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-        filteredChannels = []
-        
-        if searchText == "" {
-            filteredChannels = channels
-        } else {
-            for item in channels {
-                if item.name_ru.lowercased().contains(searchText.lowercased()) {
-                    filteredChannels.append(item)
-                }
-            }
-        }
-        tableView.reloadData()
-    }
-}
+//extension ViewController: UISearchBarDelegate {
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//
+//        filteredChannels = []
+//
+//        if searchText == "" {
+//            filteredChannels = channels
+//        } else {
+//            for item in channels {
+//                if item.name_ru.lowercased().contains(searchText.lowercased()) {
+//                    filteredChannels.append(item)
+//                }
+//            }
+//        }
+//        tableView.reloadData()
+//    }
+//}
 
 
 

@@ -18,4 +18,16 @@ final class FavoritTableViewCell: UITableViewCell {
         
         favoritImage.image = nil
     }
+    
+    override public var frame: CGRect {
+        get {
+            return super.frame
+        }
+        set {
+            var frame =  newValue
+            frame.size.height -= 10
+            super.frame = frame
+        }
+    }
+    
 }
