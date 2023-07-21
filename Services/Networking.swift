@@ -6,28 +6,79 @@
 //
 
 import Foundation
+import UIKit
 
-func parsingJson(completion: @escaping ([Channels]) -> ()) {
-    
-    let urlString = "http://limehd.online/playlist/channels.json"
-    
-    let url = URL(string: urlString)
-    
-    guard url != nil else { return }
-    
-    let session = URLSession.shared
-    let _ = session.dataTask(with: url!) { data, response, error in
-        
-        guard error == nil && data != nil else { return }
-        
-        let decoder = JSONDecoder()
-        do {
-            let ParsingData = try decoder.decode(JsonData.self, from: data!)
-            completion(ParsingData.channels)
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
-        
-    }.resume()
+//MARK: NetworkManagerProtocol
+protocol NetworkManagerProtocol {
+    func fetchListOfChannels(completion: @escaping (Channel?) -> Void)
+    func fetchImage(from url: String, completion: @escaping (Data?) -> Void)
 }
+
+class NetworkManager: NetworkManagerProtocol {
+    
+    func fetchListOfChannels(completion: @escaping (Channel?) -> Void) {
+        
+        let urlString = "http://limehd.online/playlist/channels.json"
+        performRequest(withURLString: urlString) { data, error in
+            if let error = error {
+                print("Error recieved requesting text data: \(error.localizedDescription)")
+                completion(nil)
+            }
+            let decode = self.decodeJSON(type: Channel.self, from: data)
+            completion(decode)
+        }
+    }
+    
+    
+    
+    func fetchImage(from url: String, completion: @escaping (Data?) -> Void) {
+        performRequest(withURLString: url) { data, error in
+            if let error = error {
+                print("Error recieved requesting image data: \(error.localizedDescription)")
+                completion(nil)
+            }
+            completion(data)
+        }
+    }
+    
+    
+    
+    
+    
+    //    func getImage(from data: Data) -> UIImage {
+    //        guard let image = UIImage(data: data) else { return UIImage(systemName: "xmark.icloud") }
+    //        return image
+    //    }
+    
+    private func performRequest(withURLString urlString: String, completion: @escaping (Data?, Error?) -> Void) {
+        guard let url = URL(string: urlString) else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "get"
+        let task = createDataTask(from: request, completion: completion)
+        task.resume()
+    }
+    
+    private func createDataTask(from request: URLRequest, completion: @escaping (Data? , Error?) -> Void) -> URLSessionDataTask {
+        return URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                completion(data, error)
+            }
+        }
+    }
+    
+    private func decodeJSON<T: Decodable>(type: T.Type, from: Data?) -> T? {
+        let decoder = JSONDecoder()
+        guard let data = from else { return nil }
+        
+        do {
+            let objects = try decoder.decode(type.self, from: data)
+            return objects
+        } catch let jsonError {
+            print("Failed to decode JSON", jsonError)
+            return nil
+        }
+    }
+}
+
  

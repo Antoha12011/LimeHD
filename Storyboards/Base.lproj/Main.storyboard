@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Channel ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ChannelListVC" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,9 +84,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.17249332907757775" green="0.17420118382092009" blue="0.17420118382092009" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="discriptionLbl" destination="oKY-x8-HJX" id="ASF-WU-0cR"/>
-                                            <outlet property="myImage" destination="czH-OH-d15" id="9CQ-dM-0kp"/>
-                                            <outlet property="myLabel" destination="hAt-w2-L6b" id="bL0-M0-MHv"/>
+                                            <outlet property="broadcastNameLabel" destination="oKY-x8-HJX" id="ASF-WU-0cR"/>
+                                            <outlet property="channelLogoImageView" destination="czH-OH-d15" id="9CQ-dM-0kp"/>
+                                            <outlet property="channelNameLabel" destination="hAt-w2-L6b" id="bL0-M0-MHv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="656.52173913043487" y="97.767857142857139"/>
         </scene>
-        <!--Favorit View Controller-->
+        <!--Main View Presenter-->
         <scene sceneID="wlQ-O6-qNq">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="05h-Mv-mbb" customClass="FavoritViewController" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="05h-Mv-mbb" customClass="MainViewPresenter" customModule="parse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Huh-wE-JBT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,11 +329,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WE7-B0-Z00"/>
-                    <connections>
-                        <outlet property="favoritBtn" destination="zuZ-A9-p6s" id="qpy-NP-JPD"/>
-                        <outlet property="favoritSearchBar" destination="m9p-Gj-Uip" id="iyS-gc-Ce2"/>
-                        <outlet property="favoritTableView" destination="FC6-w3-ojG" id="s8X-k5-7Ko"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G9j-MN-mdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

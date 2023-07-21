@@ -9,17 +9,29 @@ import UIKit
 
 final class TableViewCell: UITableViewCell {
     
-    @IBOutlet weak var discriptionLbl: UILabel!
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myImage: UIImageView!
+    @IBOutlet weak var broadcastNameLabel: UILabel!
+    @IBOutlet weak var channelNameLabel: UILabel!
+    @IBOutlet weak var channelLogoImageView: UIImageView!
+    
+    static let identifier = "cell"
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        myImage.image = nil
+        channelLogoImageView.image = nil
+    }
+    
+    func configure(with channelName: String, channelTitle: String, image: String, isStarButtonActive: Bool) {
+        channelNameLabel.text = channelName
+        broadcastNameLabel.text = channelTitle
+        ImageManager.shared.fetchImage(from: image) { [weak self] data in
+            guard let self = self else { return }
+            self.channelLogoImageView.image = UIImage(data: data)
+        }
     }
     
     @IBAction func favoriteBtn(_ sender: Any) {
+        print("Кнопка нажата")
     }
     
     override public var frame: CGRect {
