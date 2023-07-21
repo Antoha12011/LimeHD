@@ -22,20 +22,34 @@ final class ChannelListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var allChannelsBtn: UIButton!
+    @IBOutlet weak var allChannels: UIButton!
+    @IBOutlet weak var favoritBtn: UIButton!
+    @IBOutlet weak var lineUnderBtn: UIView!
+    @IBOutlet weak var lineUnderFavoritBtn: UIView!
+    
+    @IBAction func allChannelsBtn(_ sender: Any) {
+        lineUnderBtn.isHidden = false
+        lineUnderFavoritBtn.isHidden = true
+
+    }
+    @IBAction func favoritChannelsBtn(_ sender: Any) {
+        lineUnderFavoritBtn.isHidden = false
+        lineUnderBtn.isHidden = true
+
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        lineUnderBtn.isHidden = true
+        lineUnderFavoritBtn.isHidden = true
         
         changeColorTextField()
         
         let networkManager = NetworkManager()
         presenter = MainViewPresenter(view: self, networkManager: networkManager)
-       
-       
-       
     }
     // MARK: - Смена цвета текста в search bar
     
@@ -100,9 +114,18 @@ extension ChannelListVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//MARK: - MainViewProtocol
 extension ChannelListVC: MainViewProtocol {
     func reloadData() {
-     tableView.reloadData()
+        tableView.reloadData()
+    }
+}
+
+//MARK: - Keyboard Settings
+extension ChannelListVC: UITextViewDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
 }
 
