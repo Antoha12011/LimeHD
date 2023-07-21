@@ -19,6 +19,9 @@ final class TableViewCell: UITableViewCell {
         myImage.image = nil
     }
     
+    @IBAction func favoriteBtn(_ sender: Any) {
+    }
+    
     override public var frame: CGRect {
         get {
             return super.frame

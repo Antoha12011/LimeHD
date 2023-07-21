@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1204872A2A6ABB6500E2E964 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/LimeHD.-Test-Task/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 		1249CE6A2A0002B200C2DD22 /* FavoritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritViewController.swift; sourceTree = "<group>"; };
 		1249CE6C2A0002F300C2DD22 /* FavoritTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritTableViewCell.swift; sourceTree = "<group>"; };
 		125BAF5E2A017AF600D7E1F5 /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		129AB33D29FC4C5900B6A53B /* Channels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		12C35C892A0260DB00C3C5F1 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/parse/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +149,7 @@
 			);
 			name = parse;
 			productName = parse;
-			productReference = 12C35C892A0260DB00C3C5F1 /* parse.app */;
+			productReference = 1204872A2A6ABB6500E2E964 /* parse.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
