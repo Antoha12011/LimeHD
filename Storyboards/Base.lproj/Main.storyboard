@@ -58,10 +58,11 @@
                                                     <color key="tintColor" systemColor="systemGrayColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain">
-                                                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                                                        <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="favoriteBtn:" destination="J0f-yw-vma" eventType="touchUpInside" id="uQA-iT-yot"/>
+                                                        <action selector="starButtonTapped:" destination="J0f-yw-vma" eventType="touchUpInside" id="QWo-04-xy6"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -87,6 +88,7 @@
                                             <outlet property="broadcastNameLabel" destination="oKY-x8-HJX" id="ASF-WU-0cR"/>
                                             <outlet property="channelLogoImageView" destination="czH-OH-d15" id="9CQ-dM-0kp"/>
                                             <outlet property="channelNameLabel" destination="hAt-w2-L6b" id="bL0-M0-MHv"/>
+                                            <outlet property="starButton" destination="hRz-9p-deg" id="85a-p0-UcA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -106,7 +108,7 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bud-Hu-UOj"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRD-Rx-nR0">
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRD-Rx-nR0">
                                 <rect key="frame" x="29" y="132" width="107" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="107" id="JgL-li-OaP"/>
@@ -120,7 +122,7 @@
                                     <action selector="allChannelsBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWv-Es-8n9"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHc-MG-Was">
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHc-MG-Was">
                                 <rect key="frame" x="144" y="128" width="159" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="2fz-gS-VwY"/>
@@ -180,7 +182,7 @@
                     <navigationItem key="navigationItem" id="WUD-3d-bb9"/>
                     <connections>
                         <outlet property="allChannels" destination="WRD-Rx-nR0" id="wKm-PH-Dfg"/>
-                        <outlet property="favoritBtn" destination="NHc-MG-Was" id="uVQ-vH-bbF"/>
+                        <outlet property="favoritBtn" destination="NHc-MG-Was" id="jXZ-Wc-cYq"/>
                         <outlet property="lineUnderBtn" destination="0fP-gX-7Og" id="LQs-Hj-fJe"/>
                         <outlet property="lineUnderFavoritBtn" destination="pDt-2L-XBW" id="YqF-sy-Qp7"/>
                         <outlet property="searchBar" destination="BLu-Zv-DeQ" id="hsb-lo-SZY"/>
@@ -193,7 +195,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

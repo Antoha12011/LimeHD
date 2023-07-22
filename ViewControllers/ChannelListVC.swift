@@ -30,12 +30,11 @@ final class ChannelListVC: UIViewController {
     @IBAction func allChannelsBtn(_ sender: Any) {
         lineUnderBtn.isHidden = false
         lineUnderFavoritBtn.isHidden = true
-
     }
+    
     @IBAction func favoritChannelsBtn(_ sender: Any) {
         lineUnderFavoritBtn.isHidden = false
         lineUnderBtn.isHidden = true
-
     }
     
     
@@ -43,7 +42,7 @@ final class ChannelListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        lineUnderBtn.isHidden = true
+        lineUnderBtn.isHidden = false
         lineUnderFavoritBtn.isHidden = true
         
         changeColorTextField()
