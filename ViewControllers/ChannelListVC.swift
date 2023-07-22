@@ -30,14 +30,14 @@ final class ChannelListVC: UIViewController {
     @IBAction func allChannelsBtn(_ sender: Any) {
         lineUnderBtn.isHidden = false
         lineUnderFavoritBtn.isHidden = true
+        tableView.reloadData()
     }
     
     @IBAction func favoritChannelsBtn(_ sender: Any) {
         lineUnderFavoritBtn.isHidden = false
         lineUnderBtn.isHidden = true
+        tableView.reloadData()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

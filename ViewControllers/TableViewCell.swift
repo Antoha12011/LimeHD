@@ -16,11 +16,11 @@ final class TableViewCell: UITableViewCell {
     
     private var starButtonIsActive = false
     
-    
     @IBAction func starButtonTapped(_ sender: Any) {
         starButtonIsActive ? deleteChannel(): saveChannel()
         starButtonIsActive.toggle()
         starButton.tintColor = getStarButtonTintColor()
+        
     }
     
     private func saveChannel() {
@@ -28,14 +28,12 @@ final class TableViewCell: UITableViewCell {
         favoriteChannel.name = channelNameLabel.text ?? "No Channel Name"
         favoriteChannel.title = broadcastNameLabel.text ?? "No Broadcast Name"
         StorageManager.shared.save(favoriteChannel: favoriteChannel)
-        print("БАЗА: ВНЕСЕНО ЗНАЧЕНИЕ \(favoriteChannel.name)")
     }
     
     private func deleteChannel() {
         let favoriteChannel = FavoriteChannel()
         favoriteChannel.name = channelNameLabel.text ?? "No Channel Name"
         StorageManager.shared.delete(favoriteChannel: favoriteChannel)
-        print("БАЗА: УДАЛЕНО ЗНАЧЕНИЕ \(favoriteChannel.name)")
     }
     
     private func getStarButtonTintColor() -> UIColor {
@@ -56,10 +54,9 @@ final class TableViewCell: UITableViewCell {
             guard let self = self else { return }
             self.channelLogoImageView.image = UIImage(data: data)
         }
-    }
-    
-    @IBAction func favoriteBtn(_ sender: Any) {
-        print("Кнопка нажата")
+        
+        starButtonIsActive = isStarButtonActive
+        starButton.tintColor = getStarButtonTintColor()
     }
     
     override public var frame: CGRect {

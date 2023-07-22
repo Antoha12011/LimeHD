@@ -61,7 +61,6 @@
                                                         <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
                                                     </buttonConfiguration>
                                                     <connections>
-                                                        <action selector="favoriteBtn:" destination="J0f-yw-vma" eventType="touchUpInside" id="uQA-iT-yot"/>
                                                         <action selector="starButtonTapped:" destination="J0f-yw-vma" eventType="touchUpInside" id="QWo-04-xy6"/>
                                                     </connections>
                                                 </button>
