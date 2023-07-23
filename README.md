@@ -1,4 +1,4 @@
-# LimeHD.-Test-Task
+# LimeHD
 
 Lime ТЗ
 Тестово задание IOS: https://www.figma.com/file/8kKAxwg1lg5knX30oc6Pjr/Плеер?node-id=0%3A1
