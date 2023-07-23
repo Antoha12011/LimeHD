@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 //MARK: NetworkManagerProtocol
+
 protocol NetworkManagerProtocol {
     func fetchListOfChannels(completion: @escaping (Channel?) -> Void)
     func fetchImage(from url: String, completion: @escaping (Data?) -> Void)
