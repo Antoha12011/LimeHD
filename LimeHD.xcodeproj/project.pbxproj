@@ -31,7 +31,7 @@
 		126AECEF2A6D517D001DF156 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		126AECF12A6D5198001DF156 /* FavoriteChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteChannel.swift; sourceTree = "<group>"; };
 		126AECF32A6D51BD001DF156 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		126AECF62A6D53B0001DF156 /* parse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = parse.app; path = "/Users/antonpavlov/Desktop/LimeHD.-Test-Task/build/Debug-iphoneos/parse.app"; sourceTree = "<absolute>"; };
+		126AECF72A6D557A001DF156 /* LimeHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LimeHD.app; path = "/Users/antonpavlov/Desktop/LimeHD.-Test-Task/build/Debug-iphoneos/LimeHD.app"; sourceTree = "<absolute>"; };
 		127964A329FC17A700409F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127964A529FC17A700409F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		127964A729FC17A700409F1E /* ChannelListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListVC.swift; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1279649F29FC17A700409F1E /* parse */ = {
+		1279649F29FC17A700409F1E /* LimeHD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 127964B429FC17A900409F1E /* Build configuration list for PBXNativeTarget "parse" */;
+			buildConfigurationList = 127964B429FC17A900409F1E /* Build configuration list for PBXNativeTarget "LimeHD" */;
 			buildPhases = (
 				1279649C29FC17A700409F1E /* Sources */,
 				1279649D29FC17A700409F1E /* Frameworks */,
@@ -139,12 +139,12 @@
 			);
 			dependencies = (
 			);
-			name = parse;
+			name = LimeHD;
 			packageProductDependencies = (
 				120487432A6ACF5100E2E964 /* RealmSwift */,
 			);
 			productName = parse;
-			productReference = 126AECF62A6D53B0001DF156 /* parse.app */;
+			productReference = 126AECF72A6D557A001DF156 /* LimeHD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -162,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1279649B29FC17A700409F1E /* Build configuration list for PBXProject "parse" */;
+			buildConfigurationList = 1279649B29FC17A700409F1E /* Build configuration list for PBXProject "LimeHD" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -178,7 +178,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1279649F29FC17A700409F1E /* parse */,
+				1279649F29FC17A700409F1E /* LimeHD */,
 			);
 		};
 /* End PBXProject section */
@@ -410,7 +410,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1279649B29FC17A700409F1E /* Build configuration list for PBXProject "parse" */ = {
+		1279649B29FC17A700409F1E /* Build configuration list for PBXProject "LimeHD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				127964B229FC17A900409F1E /* Debug */,
@@ -419,7 +419,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		127964B429FC17A900409F1E /* Build configuration list for PBXNativeTarget "parse" */ = {
+		127964B429FC17A900409F1E /* Build configuration list for PBXNativeTarget "LimeHD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				127964B529FC17A900409F1E /* Debug */,
