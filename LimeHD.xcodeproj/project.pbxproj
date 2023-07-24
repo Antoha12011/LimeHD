@@ -7,40 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		120487442A6ACF5100E2E964 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 120487432A6ACF5100E2E964 /* RealmSwift */; };
-		1249CE6B2A0002B200C2DD22 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1249CE6A2A0002B200C2DD22 /* MainViewPresenter.swift */; };
-		125BAF5F2A017AF600D7E1F5 /* AVPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BAF5E2A017AF600D7E1F5 /* AVPlayer.swift */; };
-		126AECEE2A6D515B001DF156 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AECED2A6D515B001DF156 /* Channel.swift */; };
+		125408B42A6E944D00CD8680 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408B32A6E943800CD8680 /* PlayerViewController.swift */; };
+		125408B72A6E94D000CD8680 /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408B52A6E948E00CD8680 /* ChannelsView.swift */; };
+		125408B82A6E94D000CD8680 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408B62A6E94BD00CD8680 /* ChannelCell.swift */; };
+		125408BF2A6E955800CD8680 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408BE2A6E955800CD8680 /* UIButtonExtension.swift */; };
+		125408C22A6E95A500CD8680 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408C12A6E95A500CD8680 /* AppUtility.swift */; };
+		125408C62A6E99A300CD8680 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408C52A6E99A300CD8680 /* MenuCell.swift */; };
+		125408C82A6E99BD00CD8680 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125408C72A6E99BD00CD8680 /* MenuBar.swift */; };
+		126AECEE2A6D515B001DF156 /* LimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AECED2A6D515B001DF156 /* LimeResponse.swift */; };
 		126AECF02A6D517D001DF156 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AECEF2A6D517D001DF156 /* StorageManager.swift */; };
-		126AECF22A6D5198001DF156 /* FavoriteChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AECF12A6D5198001DF156 /* FavoriteChannel.swift */; };
-		126AECF42A6D51BD001DF156 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126AECF32A6D51BD001DF156 /* ImageManager.swift */; };
 		127964A429FC17A700409F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127964A329FC17A700409F1E /* AppDelegate.swift */; };
 		127964A629FC17A700409F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127964A529FC17A700409F1E /* SceneDelegate.swift */; };
-		127964A829FC17A700409F1E /* ChannelListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127964A729FC17A700409F1E /* ChannelListVC.swift */; };
-		127964AB29FC17A700409F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964A929FC17A700409F1E /* Main.storyboard */; };
+		127964A829FC17A700409F1E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127964A729FC17A700409F1E /* MainViewController.swift */; };
 		127964AD29FC17A900409F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 127964AC29FC17A900409F1E /* Assets.xcassets */; };
 		127964B029FC17A900409F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127964AE29FC17A900409F1E /* LaunchScreen.storyboard */; };
 		129AB34029FC4C8700B6A53B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB33F29FC4C8700B6A53B /* Networking.swift */; };
-		129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AB34329FC504E00B6A53B /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1249CE6A2A0002B200C2DD22 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
-		125BAF5E2A017AF600D7E1F5 /* AVPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayer.swift; sourceTree = "<group>"; };
-		126AECED2A6D515B001DF156 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		122F12992A6E9BE300AA6F03 /* LimeHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LimeHD.app; path = "/Users/antonpavlov/Desktop/LimeHD/build/Debug-iphoneos/LimeHD.app"; sourceTree = "<absolute>"; };
+		125408B32A6E943800CD8680 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		125408B52A6E948E00CD8680 /* ChannelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
+		125408B62A6E94BD00CD8680 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		125408BE2A6E955800CD8680 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		125408C12A6E95A500CD8680 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		125408C52A6E99A300CD8680 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		125408C72A6E99BD00CD8680 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		126AECED2A6D515B001DF156 /* LimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimeResponse.swift; sourceTree = "<group>"; };
 		126AECEF2A6D517D001DF156 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		126AECF12A6D5198001DF156 /* FavoriteChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteChannel.swift; sourceTree = "<group>"; };
-		126AECF32A6D51BD001DF156 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		127964A329FC17A700409F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		127964A529FC17A700409F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		127964A729FC17A700409F1E /* ChannelListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListVC.swift; sourceTree = "<group>"; };
-		127964AA29FC17A700409F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		127964A729FC17A700409F1E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		127964AC29FC17A900409F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		127964AF29FC17A900409F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		127964B129FC17A900409F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		129AB33F29FC4C8700B6A53B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
-		129AB34329FC504E00B6A53B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		12F232142A6D563D00605F70 /* LimeHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = LimeHD.app; path = "/Users/antonpavlov/Desktop/LimeHD/build/Debug-iphoneos/LimeHD.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,80 +49,104 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				120487442A6ACF5100E2E964 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		125408B12A6E930200CD8680 /* LimeHD */ = {
+			isa = PBXGroup;
+			children = (
+				128B66E329FEE31B00462A77 /* View */,
+				128B66E529FEE34A00462A77 /* Models */,
+				125408C02A6E958E00CD8680 /* Helpers */,
+				12D4AF992A0109AA00E2F47A /* Sources */,
+				12D4AF982A01098100E2F47A /* Services */,
+			);
+			path = LimeHD;
+			sourceTree = "<group>";
+		};
+		125408C02A6E958E00CD8680 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				125408C12A6E95A500CD8680 /* AppUtility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		125408C32A6E98DC00CD8680 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				125408C42A6E98F000CD8680 /* MenuBarView */,
+				125408BE2A6E955800CD8680 /* UIButtonExtension.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		125408C42A6E98F000CD8680 /* MenuBarView */ = {
+			isa = PBXGroup;
+			children = (
+				125408C52A6E99A300CD8680 /* MenuCell.swift */,
+				125408C72A6E99BD00CD8680 /* MenuBar.swift */,
+			);
+			path = MenuBarView;
+			sourceTree = "<group>";
+		};
+		125408C92A6E9A1A00CD8680 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				127964A729FC17A700409F1E /* MainViewController.swift */,
+				125408B32A6E943800CD8680 /* PlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		1279649729FC17A700409F1E = {
 			isa = PBXGroup;
 			children = (
 				127964B129FC17A900409F1E /* Info.plist */,
-				128B66E329FEE31B00462A77 /* ViewControllers */,
-				128B66E529FEE34A00462A77 /* Models */,
-				12D4AF9A2A0109C900E2F47A /* Storyboards */,
-				12D4AF992A0109AA00E2F47A /* Source */,
-				12D4AF982A01098100E2F47A /* Services */,
-				129AB34129FC4CEA00B6A53B /* SupportingFiles */,
+				125408B12A6E930200CD8680 /* LimeHD */,
 			);
 			sourceTree = "<group>";
 		};
-		128B66E329FEE31B00462A77 /* ViewControllers */ = {
+		128B66E329FEE31B00462A77 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				127964A729FC17A700409F1E /* ChannelListVC.swift */,
-				1249CE6A2A0002B200C2DD22 /* MainViewPresenter.swift */,
-				129AB34329FC504E00B6A53B /* TableViewCell.swift */,
+				125408C32A6E98DC00CD8680 /* CustomButton */,
+				125408C92A6E9A1A00CD8680 /* Controller */,
+				125408B52A6E948E00CD8680 /* ChannelsView.swift */,
+				125408B62A6E94BD00CD8680 /* ChannelCell.swift */,
 			);
-			path = ViewControllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		128B66E529FEE34A00462A77 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				126AECED2A6D515B001DF156 /* Channel.swift */,
-				126AECF12A6D5198001DF156 /* FavoriteChannel.swift */,
+				126AECED2A6D515B001DF156 /* LimeResponse.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		129AB34129FC4CEA00B6A53B /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				127964A329FC17A700409F1E /* AppDelegate.swift */,
-				127964A529FC17A700409F1E /* SceneDelegate.swift */,
-			);
-			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		12D4AF982A01098100E2F47A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				129AB33F29FC4C8700B6A53B /* Networking.swift */,
-				126AECF32A6D51BD001DF156 /* ImageManager.swift */,
 				126AECEF2A6D517D001DF156 /* StorageManager.swift */,
-				125BAF5E2A017AF600D7E1F5 /* AVPlayer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		12D4AF992A0109AA00E2F47A /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				127964AC29FC17A900409F1E /* Assets.xcassets */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		12D4AF9A2A0109C900E2F47A /* Storyboards */ = {
+		12D4AF992A0109AA00E2F47A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				127964AE29FC17A900409F1E /* LaunchScreen.storyboard */,
-				127964A929FC17A700409F1E /* Main.storyboard */,
+				127964AC29FC17A900409F1E /* Assets.xcassets */,
+				127964A329FC17A700409F1E /* AppDelegate.swift */,
+				127964A529FC17A700409F1E /* SceneDelegate.swift */,
 			);
-			path = Storyboards;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +166,9 @@
 			);
 			name = LimeHD;
 			packageProductDependencies = (
-				120487432A6ACF5100E2E964 /* RealmSwift */,
 			);
 			productName = parse;
-			productReference = 12F232142A6D563D00605F70 /* LimeHD.app */;
+			productReference = 122F12992A6E9BE300AA6F03 /* LimeHD.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +196,6 @@
 			);
 			mainGroup = 1279649729FC17A700409F1E;
 			packageReferences = (
-				120487422A6ACF5100E2E964 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 1279649729FC17A700409F1E;
 			projectDirPath = "";
@@ -190,7 +213,6 @@
 			files = (
 				127964B029FC17A900409F1E /* LaunchScreen.storyboard in Resources */,
 				127964AD29FC17A900409F1E /* Assets.xcassets in Resources */,
-				127964AB29FC17A700409F1E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,31 +223,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1249CE6B2A0002B200C2DD22 /* MainViewPresenter.swift in Sources */,
-				126AECEE2A6D515B001DF156 /* Channel.swift in Sources */,
-				127964A829FC17A700409F1E /* ChannelListVC.swift in Sources */,
-				126AECF42A6D51BD001DF156 /* ImageManager.swift in Sources */,
+				125408C22A6E95A500CD8680 /* AppUtility.swift in Sources */,
+				126AECEE2A6D515B001DF156 /* LimeResponse.swift in Sources */,
+				125408C62A6E99A300CD8680 /* MenuCell.swift in Sources */,
+				127964A829FC17A700409F1E /* MainViewController.swift in Sources */,
+				125408B72A6E94D000CD8680 /* ChannelsView.swift in Sources */,
+				125408B82A6E94D000CD8680 /* ChannelCell.swift in Sources */,
+				125408C82A6E99BD00CD8680 /* MenuBar.swift in Sources */,
 				126AECF02A6D517D001DF156 /* StorageManager.swift in Sources */,
-				125BAF5F2A017AF600D7E1F5 /* AVPlayer.swift in Sources */,
+				125408BF2A6E955800CD8680 /* UIButtonExtension.swift in Sources */,
 				129AB34029FC4C8700B6A53B /* Networking.swift in Sources */,
 				127964A429FC17A700409F1E /* AppDelegate.swift in Sources */,
-				126AECF22A6D5198001DF156 /* FavoriteChannel.swift in Sources */,
-				129AB34429FC504E00B6A53B /* TableViewCell.swift in Sources */,
 				127964A629FC17A700409F1E /* SceneDelegate.swift in Sources */,
+				125408B42A6E944D00CD8680 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		127964A929FC17A700409F1E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				127964AA29FC17A700409F1E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		127964AE29FC17A900409F1E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -364,9 +380,9 @@
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +390,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mts.parse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -391,9 +410,9 @@
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,6 +420,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.mts.parse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -429,25 +451,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		120487422A6ACF5100E2E964 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		120487432A6ACF5100E2E964 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 120487422A6ACF5100E2E964 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1279649829FC17A700409F1E /* Project object */;
 }
